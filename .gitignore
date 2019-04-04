@@ -1,0 +1,22 @@
+# Eclipse specific files #
+/bin/
+/target/
+
+# for log files #
+*.log
+ScenariosTest.csv
+
+# output files #
+/testRun/logs/*
+/testRun/reports/*
+/test-output
+
+
+# intelliJ specific files #
+.DS_Store
+.idea/
+*.iml
+
+# properties file #
+*.properties
+/local
