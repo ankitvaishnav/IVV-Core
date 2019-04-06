@@ -1,5 +1,5 @@
 package main.java.io.mosip.ivv.core.policies;
 
-public enum Error {
+public enum ErrorPolicy {
     HTTP_ERROR_CODE, HTTP_STATUS
 }

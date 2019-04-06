@@ -1,6 +1,7 @@
 package main.java.io.mosip.ivv.core.structures;
 
-import main.java.io.mosip.ivv.core.policies.Assertion;
+import main.java.io.mosip.ivv.core.policies.AssertionPolicy;
+import main.java.io.mosip.ivv.core.policies.ErrorPolicy;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,12 +27,12 @@ public class Scenario {
         public ArrayList<Integer> index = new ArrayList<Integer>();
 
         public static class Error{
-            public Error type;
+            public ErrorPolicy type;
             public ArrayList<String> parameters = new ArrayList<String>();
         }
 
         public static class Assert{
-            public Assertion type;
+            public AssertionPolicy type;
             public ArrayList<String> parameters = new ArrayList<String>();
         }
 

@@ -107,8 +107,8 @@ public class Utils {
             case 409: // Conflict
                 returnString = "Conflict! The request could not be completed due to a conflict with the current state of the resource.";
                 break;
-            case 500: // Internal Server Error
-                returnString = "Internal Server Error! The server encountered an unexpected condition which prevented it from fulfilling the request";
+            case 500: // Internal Server ErrorPolicy
+                returnString = "Internal Server ErrorPolicy! The server encountered an unexpected condition which prevented it from fulfilling the request";
                 break;
             case 503: // Service Unavailable
                 returnString = "Service Unavailable! The server is currently unable to handle the request due to a temporary overloading or maintenance of the server";
