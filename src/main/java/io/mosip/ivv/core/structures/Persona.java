@@ -4,29 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Persona {
-    public PersonaDef personaDef = null;
     public String group_name = "";
     public String persona_class = "";
-
-    public Persona() {
-        personaDef = new PersonaDef();
-    }
-
-    public String getGender() {
-        return personaDef.gender.toString();
-    }
-
-    public String getResidenceStatus() {
-        return personaDef.residence_status.toString();
-    }
-
-    public String getRole() {
-        return personaDef.role.toString();
-    }
 
     public ArrayList<Persona> persons;
 
     public class Person {
+        public PersonaDef personaDef = null;
         public String name = "";
         public String userid = "";
         public String phone = "";
@@ -86,5 +70,21 @@ public class Persona {
         public Biometrics face;
 
         public ArrayList<ProofDocument> documents;
+
+        public Person() {
+            personaDef = new PersonaDef();
+        }
+
+        public String getGender() {
+            return personaDef.gender.toString();
+        }
+
+        public String getResidenceStatus() {
+            return personaDef.residence_status.toString();
+        }
+
+        public String getRole() {
+            return personaDef.role.toString();
+        }
     }
 }
