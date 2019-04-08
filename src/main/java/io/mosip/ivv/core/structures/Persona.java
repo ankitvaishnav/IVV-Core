@@ -7,7 +7,7 @@ public class Persona {
     public String group_name = "";
     public String persona_class = "";
 
-    public ArrayList<Persona> persons;
+    public ArrayList<Person> persons = new ArrayList<>();
 
     public static class Person {
         public PersonaDef personaDef = null;
