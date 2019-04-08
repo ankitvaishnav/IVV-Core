@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Persona {
     public PersonaDef personaDef = null;
-
+    public String group_name = "";
     public String name = "";
     public String userid = "";
     public String phone = "";
