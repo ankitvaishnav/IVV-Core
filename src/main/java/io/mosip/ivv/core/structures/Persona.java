@@ -9,6 +9,10 @@ public class Persona {
 
     public ArrayList<Person> persons = new ArrayList<>();
 
+    public void addPerson(Person pr){
+        persons.add(pr);
+    }
+
     public static class Person {
         public PersonaDef personaDef = null;
         public String name = "";
