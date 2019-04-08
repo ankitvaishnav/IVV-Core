@@ -9,7 +9,7 @@ public class Persona {
 
     public ArrayList<Persona> persons;
 
-    public class Person {
+    public static class Person {
         public PersonaDef personaDef = null;
         public String name = "";
         public String userid = "";
