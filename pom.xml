@@ -6,7 +6,7 @@
 
     <groupId>io.mosip.ivv.core</groupId>
     <artifactId>core</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <build>
         <sourceDirectory>src</sourceDirectory>
