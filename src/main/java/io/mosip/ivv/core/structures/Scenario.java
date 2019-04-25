@@ -16,7 +16,7 @@ public class Scenario {
     private String name = "";
     private String description = "";
     private ArrayList<String> tags = new ArrayList();
-    private String persona_class, group_name;
+    private String personaClass, groupName;
 
     @Getter
     @Setter
@@ -64,7 +64,7 @@ public class Scenario {
     @Setter
     public static class Data
     {
-        private String persona_class,tag,group_name;
+        private String personaClass,tag,groupName;
         private Persona persona;
         private Persona operator;
         private Persona supervisor;

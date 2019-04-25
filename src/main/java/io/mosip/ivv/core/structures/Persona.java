@@ -10,8 +10,8 @@ import java.util.List;
 @Setter
 public class Persona {
     private String id = "";
-    private String group_name = "";
-    private String persona_class = "";
+    private String groupName = "";
+    private String personaClass = "";
     private ArrayList<Person> persons = new ArrayList<>();
     public void addPerson(Person pr){
         persons.add(pr);

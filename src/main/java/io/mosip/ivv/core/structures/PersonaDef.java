@@ -17,8 +17,8 @@ public class PersonaDef {
         APPLICANT, OPERATOR, SUPERVISOR, ADMINISTRATOR, ADJUDICATOR
     }
 
-    public AGE_GROUP age_group = AGE_GROUP.ADULT;
+    public AGE_GROUP ageGroup = AGE_GROUP.ADULT;
     public GENDER gender = GENDER.MALE;
-    public RESIDENCE_STATUS residence_status = RESIDENCE_STATUS.CITIZEN;
+    public RESIDENCE_STATUS residenceStatus = RESIDENCE_STATUS.CITIZEN;
     public ROLE role = ROLE.APPLICANT;
 }

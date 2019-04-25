@@ -9,7 +9,7 @@ public class CallRecord {
     private record_types type = record_types.HTTP;
     private String url = "";
     private String method = "";
-    private String input_data = "";
+    private String inputData = "";
     private String result = "";
     private Response response = null;
     private String status = "";
@@ -18,7 +18,7 @@ public class CallRecord {
     public CallRecord(String url, String method, String input_data, Response response, String status) {
         this.url = url;
         this.method = method;
-        this.input_data = input_data;
+        this.inputData = input_data;
         this.response = response;
         this.status = status;
         this.statusCode = response.getStatusCode();
@@ -27,7 +27,7 @@ public class CallRecord {
     public CallRecord(record_types type, String method, String input_data, String result) {
         this.type = type;
         this.method = method;
-        this.input_data = input_data;
+        this.inputData = input_data;
         this.result = result;
     }
 }

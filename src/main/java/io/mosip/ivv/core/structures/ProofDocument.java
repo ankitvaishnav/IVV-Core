@@ -12,10 +12,10 @@ public class ProofDocument {
     private enum DOCUMENT_CATEGORY {POA, POB, POI, POE, POR};
     @Deprecated
     private String path = "";
-    private DOCUMENT_CATEGORY doc_cat_code = DOCUMENT_CATEGORY.POI;
-    private String doc_type_code = "";
-    private String doc_file_format = "";
-    private String doc_id = "";
+    private DOCUMENT_CATEGORY docCatCode = DOCUMENT_CATEGORY.POI;
+    private String docTypeCode = "";
+    private String docFileFormat = "";
+    private String docId = "";
     private String name = "";
     private String file = "";
     private ArrayList<String> tags = new ArrayList();

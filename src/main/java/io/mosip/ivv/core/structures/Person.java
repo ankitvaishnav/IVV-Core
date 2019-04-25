@@ -15,9 +15,9 @@ public class Person {
     private String phone = "";
     private String email = "";
     private String otp = "";
-    private String registration_center_id = "";
-    private String ec_number = "";
-    private String status_code = "";
+    private String registrationCenterId = "";
+    private String ecNumber = "";
+    private String statusCode = "";
     private String err = "";
     private String errorCode = "";
     private String status = "";
@@ -33,42 +33,41 @@ public class Person {
     private String response = "";
 
     /* pre-reg store */
-    private String pre_registration_id = "";
-    private String pre_registration_status_code = "";
+    private String preRegistrationId = "";
+    private String preRegistrationCenterId = "";
 
     // required in create pre-registration api
-    private String preffered_lang = "";
-    private String default_lang = "";
-    private String date_of_birth = "";
-    private String address_line_1 = "";
-    private String address_line_2 = "";
-    private String address_line_3 = "";
+    private String preferredLang = "";
+    private String defaultLang = "";
+    private String dateOfBirth = "";
+    private String addressLine1 = "";
+    private String addressLine2 = "";
+    private String addressLine3 = "";
     private String region = "";
     private String province = "";
     private String city = "";
-    private String local_administrative_authority = "";
-    private String id_schema_version = "";
-    private String cnie_number = "";
-    private String postal_code = "";
-    private String lang_code = "ENG";
+    private String localAdministrativeAuthority = "";
+    private String idSchemaVersion = "";
+    private String cnieNumber = "";
+    private String postalCode = "";
+    private String langCode = "ENG";
 
-    private ProofDocument proof_of_address = null;
-    private ProofDocument proof_of_date_of_birth = null;
-    private ProofDocument proof_of_identity = null;
-    private ProofDocument proof_of_relationship = null;
-    private ProofDocument proof_of_exception = null;
-    private ProofDocument proof_of_exemption = null;
+    private ProofDocument proofOfAddress = null;
+    private ProofDocument proofOfBirth = null;
+    private ProofDocument proofOfIdentity = null;
+    private ProofDocument proofOfRelationship = null;
+    private ProofDocument proofOfException = null;
+    private ProofDocument proofOfExemption = null;
 
-    private String UIN = "";
-    private List<String> VIDs = new ArrayList<String>();
-    private String preferred_language = "en";
-    private boolean has_biometric_exception = false;
+    private String uin = "";
+    private List<String> vids = new ArrayList<String>();
+    private boolean hasBiometricException = false;
 
     private Biometrics thumbs = null;
-    private Biometrics left_slap = null;
-    private Biometrics right_slap = null;
-    private Biometrics left_iris = null;
-    private Biometrics right_iris = null;
+    private Biometrics leftSlap = null;
+    private Biometrics rightSlap = null;
+    private Biometrics leftIris = null;
+    private Biometrics rightIris = null;
     private Biometrics face = null;
 
     @Deprecated
@@ -83,7 +82,7 @@ public class Person {
     }
 
     public void setResidenceStatus(PersonaDef.RESIDENCE_STATUS p) {
-        this.personaDef.residence_status = p;
+        this.personaDef.residenceStatus = p;
     }
 
     public void setRole(PersonaDef.ROLE p) {
@@ -95,7 +94,7 @@ public class Person {
     }
 
     public String getResidenceStatus() {
-        return personaDef.residence_status.toString();
+        return personaDef.residenceStatus.toString();
     }
 
     public String getRole() {
