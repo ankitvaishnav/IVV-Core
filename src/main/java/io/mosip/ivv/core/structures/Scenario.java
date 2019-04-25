@@ -20,7 +20,7 @@ public class Scenario {
 
     @Getter
     @Setter
-    public class Step
+    public static class Step
     {
         private String name = ""; // needs to be passed
         private String variant = "DEFAULT"; // default
@@ -47,6 +47,10 @@ public class Scenario {
                 this.type = t;
                 this.parameters = p;
             }
+        }
+
+        public Step(){
+
         }
 
         public Step(String name, String variant, ArrayList<Assert> asserts, ArrayList<Error> errors, ArrayList<String> parameters, ArrayList<Integer> index)
