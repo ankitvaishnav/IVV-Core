@@ -78,6 +78,18 @@ public class Person {
         personaDef = new PersonaDef();
     }
 
+    public void setGender(PersonaDef.GENDER p) {
+        this.personaDef.gender = p;
+    }
+
+    public void setResidenceStatus(PersonaDef.RESIDENCE_STATUS p) {
+        this.personaDef.residence_status = p;
+    }
+
+    public void setRole(PersonaDef.ROLE p) {
+        this.personaDef.role = p;
+    }
+
     public String getGender() {
         return personaDef.gender.toString();
     }

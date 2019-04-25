@@ -21,6 +21,4 @@ public class PersonaDef {
     public GENDER gender = GENDER.MALE;
     public RESIDENCE_STATUS residence_status = RESIDENCE_STATUS.CITIZEN;
     public ROLE role = ROLE.APPLICANT;
-    public String name = "";
-
 }
