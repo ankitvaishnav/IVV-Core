@@ -6,6 +6,9 @@ import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvSchema;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -145,6 +148,34 @@ public class Utils {
             e.printStackTrace();
         }
         return (HashMap) obj;
+    }
+
+    public static String readFileAsString(String path){
+        byte[] encoded = new byte[0];
+        try {
+            encoded = Files.readAllBytes(Paths.get(path));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return new String(encoded, StandardCharsets.UTF_8);
+    }
+
+    public static byte[] readFileAsByte(String path){
+        byte[] encoded = new byte[0];
+        try {
+            encoded = Files.readAllBytes(Paths.get(path));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return encoded;
+    }
+
+    public static String byteToBase64(byte[] b){
+        return Base64.getEncoder().encodeToString(b);
+    }
+
+    public static byte[] base64ToByte(String b){
+        return Base64.getDecoder().decode(b);
     }
 
     public static String csvToJson(String path){
