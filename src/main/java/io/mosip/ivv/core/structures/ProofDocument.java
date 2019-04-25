@@ -1,15 +1,22 @@
 package main.java.io.mosip.ivv.core.structures;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.ArrayList;
 
+@Getter
+@Setter
 public class ProofDocument {
 
-    public enum DOCUMENT_CATEGORY {POA, POB, POI, POE, POR};
-    public String path = "";
-    public DOCUMENT_CATEGORY doc_cat_code = DOCUMENT_CATEGORY.POI;
-    public String doc_type_code = "";
-    public String doc_file_format = "";
-    public String doc_id = "";
-    public String name = "";
-    public ArrayList<String> tags = new ArrayList();
+    private enum DOCUMENT_CATEGORY {POA, POB, POI, POE, POR};
+    @Deprecated
+    private String path = "";
+    private DOCUMENT_CATEGORY doc_cat_code = DOCUMENT_CATEGORY.POI;
+    private String doc_type_code = "";
+    private String doc_file_format = "";
+    private String doc_id = "";
+    private String name = "";
+    private String file = "";
+    private ArrayList<String> tags = new ArrayList();
 }

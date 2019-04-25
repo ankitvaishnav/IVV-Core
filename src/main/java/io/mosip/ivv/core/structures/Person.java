@@ -1,68 +1,77 @@
 package main.java.io.mosip.ivv.core.structures;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Getter
+@Setter
 public class Person {
-    public PersonaDef personaDef = null;
-    public String name = "";
-    public String userid = "";
-    public String phone = "";
-    public String email = "";
-    public String otp = "";
-    public String registration_center_id = "";
-    public String ec_number = "";
-    public String status_code = "";
-    public String err = "";
-    public String errorCode = "";
-    public String status = "";
-    public String message = "";
-    public String resTime = "";
-    public String resMsg = "";
-    public String deletedBy = "";
-    public String deletedDateTime = "";
-    public String sourcePreRegId = "";
-    public String sourceDocumnetId = "";
-    public String destPreRegId = "";
-    public String destDocumnetId = "";
-    public String response = "";
+    private PersonaDef personaDef = null;
+    private String name = "";
+    private String userid = "";
+    private String phone = "";
+    private String email = "";
+    private String otp = "";
+    private String registration_center_id = "";
+    private String ec_number = "";
+    private String status_code = "";
+    private String err = "";
+    private String errorCode = "";
+    private String status = "";
+    private String message = "";
+    private String resTime = "";
+    private String resMsg = "";
+    private String deletedBy = "";
+    private String deletedDateTime = "";
+    private String sourcePreRegId = "";
+    private String sourceDocumnetId = "";
+    private String destPreRegId = "";
+    private String destDocumnetId = "";
+    private String response = "";
 
     /* pre-reg store */
-    public String pre_registration_id = "";
-    public String pre_registration_status_code = "";
+    private String pre_registration_id = "";
+    private String pre_registration_status_code = "";
 
     // required in create pre-registration api
-    public String preffered_lang = "";
-    public String default_lang = "";
-    public String date_of_birth = "";
-    public String address_line_1 = "";
-    public String address_line_2 = "";
-    public String address_line_3 = "";
-    public String region = "";
-    public String province = "";
-    public String city = "";
-    public String local_administrative_authority = "";
-    public String id_schema_version = "";
-    public String cnie_number = "";
-    public String postal_code = "";
-    public String lang_code = "ENG";
+    private String preffered_lang = "";
+    private String default_lang = "";
+    private String date_of_birth = "";
+    private String address_line_1 = "";
+    private String address_line_2 = "";
+    private String address_line_3 = "";
+    private String region = "";
+    private String province = "";
+    private String city = "";
+    private String local_administrative_authority = "";
+    private String id_schema_version = "";
+    private String cnie_number = "";
+    private String postal_code = "";
+    private String lang_code = "ENG";
 
-    public ProofDocument proof_of_address = null;
-    public ProofDocument proof_of_date_of_birth = null;
-    public ProofDocument proof_of_identity = null;
-    public ProofDocument proof_of_relationship = null;
-    public ProofDocument proof_of_exception = null;
-    public ProofDocument proof_of_exemption = null;
+    private ProofDocument proof_of_address = null;
+    private ProofDocument proof_of_date_of_birth = null;
+    private ProofDocument proof_of_identity = null;
+    private ProofDocument proof_of_relationship = null;
+    private ProofDocument proof_of_exception = null;
+    private ProofDocument proof_of_exemption = null;
 
-    public String UIN = "";
-    public List<String> VIDs = new ArrayList<String>();
-    public String preferred_language = "en";
-    public boolean has_biometric_exception = false;
+    private String UIN = "";
+    private List<String> VIDs = new ArrayList<String>();
+    private String preferred_language = "en";
+    private boolean has_biometric_exception = false;
 
-    public Biometrics fingers;
-    public Biometrics irises;
-    public Biometrics face;
+    private Biometrics thumbs = null;
+    private Biometrics left_slap = null;
+    private Biometrics right_slap = null;
+    private Biometrics left_iris = null;
+    private Biometrics right_iris = null;
+    private Biometrics face = null;
 
+    @Deprecated
     public ArrayList<ProofDocument> documents;
 
     public Person() {

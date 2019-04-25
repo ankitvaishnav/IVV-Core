@@ -1,7 +1,9 @@
 package main.java.io.mosip.ivv.core.structures;
 
-public class PersonaDef {
+import lombok.Getter;
+import lombok.Setter;
 
+public class PersonaDef {
     public enum AGE_GROUP {
         ADULT, CHILD, INFANT
     }

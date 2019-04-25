@@ -1,5 +1,7 @@
 package main.java.io.mosip.ivv.core.structures;
 
+import lombok.Getter;
+import lombok.Setter;
 import main.java.io.mosip.ivv.core.policies.AssertionPolicy;
 import main.java.io.mosip.ivv.core.policies.ErrorPolicy;
 
@@ -7,38 +9,44 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+@Getter
+@Setter
 public class Scenario {
+    private String id = "";
+    private String name = "";
+    private String description = "";
+    private ArrayList<String> tags = new ArrayList();
+    private String persona_class, group_name;
 
-    public String name = "";
-    public String description = "";
-    public ArrayList<String> flags = new ArrayList();
-    public String persona_class,persona,tag,group_name;
-
-    public static class Step
+    @Getter
+    @Setter
+    public class Step
     {
+        private String name = ""; // needs to be passed
+        private String variant = "DEFAULT"; // default
+        private ArrayList<Assert> asserts;
+        private ArrayList<Error> errors;
+        private int AssertionPolicy = 0; // default
+        private boolean FailExpected = false; //default
+        private ArrayList<String> parameters;
+        private ArrayList<Integer> index;
 
-        public String name = ""; // needs to be passed
-        public String variant = "DEFAULT"; // default
-        public ArrayList<Assert> asserts;
-        public ArrayList<Error> errors;
-        public int AssertionPolicy = 0; // default
-        public boolean FailExpected = false; //default
-        public ArrayList<String> parameters = new ArrayList<String>();
-        public ArrayList<Integer> index = new ArrayList<Integer>();
-
-        public static class Error{
+        public class Error{
             public ErrorPolicy type;
-            public ArrayList<String> parameters = new ArrayList<String>();
+            public ArrayList<String> parameters;
+            public Error(ErrorPolicy t, ArrayList<String> p) {
+                this.type = t;
+                this.parameters = p;
+            }
         }
 
-        public static class Assert{
+        public class Assert{
             public AssertionPolicy type;
-            public ArrayList<String> parameters = new ArrayList<String>();
-        }
-
-        public Step()
-        {
-
+            public ArrayList<String> parameters;
+            public Assert(AssertionPolicy t, ArrayList<String> p) {
+                this.type = t;
+                this.parameters = p;
+            }
         }
 
         public Step(String name, String variant, ArrayList<Assert> asserts, ArrayList<Error> errors, ArrayList<String> parameters, ArrayList<Integer> index)
@@ -52,19 +60,21 @@ public class Scenario {
         }
     }
 
+    @Getter
+    @Setter
     public static class Data
     {
-        public String persona_class,tag,group_name;
-        public ArrayList<Persona> persons = new ArrayList<Persona>();
-        public Persona user;
-        public HashMap<String, String> globals;
-        public void addPerson(Persona person){
-            this.persons.add(person);
-        }
+        private String persona_class,tag,group_name;
+        private Persona persona;
+        private Persona operator;
+        private Persona supervisor;
+        private Persona user;
+        private HashMap<String, String> globals;
+        private HashMap<String, String> configs;
     }
 
-    public List<Step> steps = new ArrayList<Step>();
-    public Data data = null;
-    public boolean continueOnFailure = false; // default
-    public boolean isFailureExpected = false; // default
+    private List<Step> steps = new ArrayList<Step>();
+    private Data data = null;
+    private boolean continueOnFailure = false; // default
+    private boolean isFailureExpected = false; // default
 }
