@@ -52,6 +52,7 @@ public class Person {
     private String postalCode = "";
     private String langCode = "ENG";
 
+    private ArrayList<String> docTypeList;
     private ProofDocument proofOfAddress = null;
     private ProofDocument proofOfBirth = null;
     private ProofDocument proofOfIdentity = null;
