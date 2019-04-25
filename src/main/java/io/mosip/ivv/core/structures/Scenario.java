@@ -18,6 +18,8 @@ public class Scenario {
     private ArrayList<String> tags = new ArrayList();
     private String personaClass, groupName;
 
+    @Getter
+    @Setter
     public static class Step
     {
         private String name = ""; // needs to be passed
