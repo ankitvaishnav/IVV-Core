@@ -31,20 +31,12 @@ public class Scenario {
 
         public static class Error{
             public ErrorPolicy type;
-            public ArrayList<String> parameters;
-            public Error(ErrorPolicy t, ArrayList<String> p) {
-                this.type = t;
-                this.parameters = p;
-            }
+            public ArrayList<ErrorPolicy> parameters = new ArrayList<>();
         }
 
         public static class Assert{
             public main.java.io.mosip.ivv.core.policies.AssertionPolicy type;
-            public ArrayList<String> parameters;
-            public Assert(AssertionPolicy t, ArrayList<String> p) {
-                this.type = t;
-                this.parameters = p;
-            }
+            public ArrayList<AssertionPolicy> parameters = new ArrayList<>();
         }
 
         public Step(){
