@@ -64,6 +64,7 @@ public class Person {
     private List<String> vids = new ArrayList<String>();
     private boolean hasBiometricException = false;
 
+    private ArrayList<String> bioCaptureList;
     private Biometrics thumbs = null;
     private Biometrics leftSlap = null;
     private Biometrics rightSlap = null;
