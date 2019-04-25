@@ -20,7 +20,7 @@ public class Step
     private ArrayList<String> parameters;
     private ArrayList<Integer> index;
 
-    public class Error{
+    public static class Error{
         public ErrorPolicy type;
         public ArrayList<String> parameters;
         public Error(ErrorPolicy t, ArrayList<String> p) {
@@ -29,7 +29,7 @@ public class Step
         }
     }
 
-    public class Assert{
+    public static class Assert{
         public main.java.io.mosip.ivv.core.policies.AssertionPolicy type;
         public ArrayList<String> parameters;
         public Assert(AssertionPolicy t, ArrayList<String> p) {
