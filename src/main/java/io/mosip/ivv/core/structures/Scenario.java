@@ -56,6 +56,8 @@ public class Scenario {
         }
     }
 
+    @Getter
+    @Setter
     public static class Data
     {
         private String personaClass,tag,groupName;
@@ -63,8 +65,6 @@ public class Scenario {
         private Persona operator;
         private Persona supervisor;
         private Persona user;
-        private HashMap<String, String> globals;
-        private HashMap<String, String> configs;
     }
 
     private List<Step> steps = new ArrayList<Step>();
