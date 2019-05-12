@@ -62,9 +62,9 @@ public class Scenario {
     {
         private String personaClass,tag,groupName;
         private Persona persona;
-        private Persona operator;
-        private Persona supervisor;
-        private Persona user;
+        private Person operator;
+        private Person supervisor;
+        private Person user;
     }
 
     private List<Step> steps = new ArrayList<Step>();
