@@ -12,6 +12,8 @@ public class Person {
     private PersonaDef personaDef = null;
     private String name = "";
     private String userid = "";
+    private String password = "";
+    private String center_id = "";
     private String phone = "";
     private String email = "";
     private String otp = "";
