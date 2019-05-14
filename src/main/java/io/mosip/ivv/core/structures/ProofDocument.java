@@ -9,7 +9,7 @@ import java.util.ArrayList;
 @Setter
 public class ProofDocument {
 
-    public enum DOCUMENT_CATEGORY {POA, POB, POI, POE, POR};
+    public enum DOCUMENT_CATEGORY {POA, POB, POI, POR, POEX, POEM};
     @Deprecated
     private String path = "";
     private DOCUMENT_CATEGORY docCatCode = DOCUMENT_CATEGORY.POI;
